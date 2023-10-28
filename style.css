@@ -2,6 +2,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 :root {
   --blue-color: rgb(69, 144, 206);
 }
@@ -15,10 +23,112 @@
 }
 
 .header {
-  background-color: red;
+  display: grid;
+  grid-template-rows: 2fr 4fr;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  margin-top: 20px;
+}
 
+.header .top {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
+
+.header .top img {
+  width: 25px;
+}
+
+.header .top .left,
+.header .top .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.header .top .right {
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.header .top .left {
+  max-width: 75%;
+  margin-left: 25px;
+}
+
+.header .top .right .icon {
+  width: 40px;
+}
+
+.header .top .left input {
+  width: 75%;
+  max-width: 800px;
+  border-radius: 12px;
+  border: none;
+  height: 25px;
+  background-color: rgb(227, 232, 239);
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.19);
+}
+
+.header .bottom {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-bottom: 0px;
+}
+
+.header .bottom .left {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  margin-left: 25px;
+  gap: 10px;
+  align-items: start;
+  padding: 10px;
+}
+
+.header .bottom .left .right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 10px;
+  gap: 10px;
+}
+
+.header .bottom .left .right :nth-child(1) {
+  font-size: 18px;
+}
+
+.header .bottom .left .right :nth-child(2) {
+  font-size: 22px;
+}
+
+.header .bottom .right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header .bottom .right ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(3, 100px);
+}
+
+.header .bottom .right button {
+  color: white;
+  background-color: var(--blue-color);
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 90px;
+  font-size: 18px;
+}
+
+.header .bottom .left img {
+  width: 75px;
 }
 
 .sidebar {
