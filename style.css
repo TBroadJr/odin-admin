@@ -138,6 +138,16 @@ p {
   padding-top: 20px;
 }
 
+.sidebar-icon {
+  width: 25px;
+}
+
+.sidebar li {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .sidebar-head {
   display: flex;
   flex-direction: row;
@@ -151,9 +161,10 @@ p {
   height: 40px;
 }
 
-.sidebar p {
-  font-size: 25px;
+
+.sidebar-title {
   font-weight: bold;
+  font-size: 25px;
 }
 
 .sidebar ul {
@@ -175,7 +186,7 @@ p {
 
 .main .project-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
   padding: 0 20px;
 }
@@ -194,7 +205,8 @@ p {
 }
 
 .project-butns {
-  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-right: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
