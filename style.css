@@ -76,7 +76,6 @@ p {
 .header .bottom {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  margin-bottom: 0px;
 }
 
 .header .bottom .left {
@@ -166,7 +165,91 @@ p {
 }
 
 .main {
-  background-color: lightcoral;
   grid-column: 2 / 2;
   grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main .left {
+  background-color: blue;
+}
+
+.main .right {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: rgb(227, 232, 239);
+}
+
+.main .right .top,
+.main .right .bottom {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  padding: 20px;
+}
+
+.main .right .top .content {
+  display: grid;
+  grid-template-rows: 1fr 15px 1fr 15px 1fr 15px;
+  padding: 30px;
+  gap: 10px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+}
+
+.main .right .bottom .content {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  background-color: white;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.main .right .bottom img {
+  width: 60px;
+  border-radius: 50px;
+}
+
+.trending-container {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 10px;
+}
+
+.trending-info {
+  display: grid;
+  grid-template-rows: 20px 20px;
+  font-size: 12px;
+  margin-top: 10px;
+  
+}
+
+.main .right .top .title,
+.main .right .bottom .title {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.main .content-title {
+  font-size: 15px;
+  text-align: left;
+  margin: 0;
+}
+
+.main .content-detail {
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+}
+
+.content-border {
+  height: 1px;
+  background-color: rgb(169, 169, 169, 0.5);
+  margin: 10px;
+  
 }
